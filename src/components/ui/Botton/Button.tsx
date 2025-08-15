@@ -3,14 +3,15 @@ import type { ReactNode } from "react";
 interface PropTypes {
 
     children : ReactNode;
+    type: 'submit' | 'button';
 
 }
 
 const Button = (props:PropTypes) =>{
 
-   const {children} = props; 
+   const {children, type} = props; 
 
-    return <button>{children}</button>
+    return <button type={type}>{children}</button>
 }
 
 export default Button;
