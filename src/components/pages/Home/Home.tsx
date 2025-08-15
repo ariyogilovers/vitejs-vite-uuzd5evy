@@ -21,8 +21,7 @@ const Home = () => {
             {item.harga.toLocaleString("id-ID")}
           </li>
         ))}
-      </ul>
-            
+      </ul>            
         </main>
     );
     
