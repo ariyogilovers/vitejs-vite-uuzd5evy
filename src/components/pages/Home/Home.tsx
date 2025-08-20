@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../ui/Botton";
 import styles from "./Home.module.css";
 
@@ -14,6 +14,11 @@ const Home = () => {
 
     const [darkmode, setDarkmode] = useState<boolean>(false);
     console.log("darkmode saat ini",darkmode);
+
+    useEffect(() => {
+      console.log("Use Efect nih bos");
+
+    },[darkmode])
 
     return (
 
