@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Button from "../../ui/Botton";
+import styles from "./Home.module.css";
 
 // Array makanan
 const makanan = [
@@ -10,9 +12,13 @@ const makanan = [
 
 const Home = () => {
 
+    const [darkmode, setDarkmode] = useState<boolean>(false);
+
+
+
     return (
 
-        <main>
+        <main className={styles.dark}>
             <h2>Daftar Makanan</h2>
       <ul>
         {makanan.map((item, index) => (
@@ -21,7 +27,8 @@ const Home = () => {
             {item.harga.toLocaleString("id-ID")}
           </li>
         ))}
-      </ul>            
+      </ul>  
+      <br/>          
         </main>
     );
     
