@@ -13,12 +13,11 @@ const makanan = [
 const Home = () => {
 
     const [darkmode, setDarkmode] = useState<boolean>(false);
-
-
+    console.log("darkmode saat ini",darkmode);
 
     return (
 
-        <main className={styles.dark}>
+        <main className={darkmode ? styles.dark : styles.light}>
             <h2>Daftar Makanan</h2>
       <ul>
         {makanan.map((item, index) => (
@@ -28,7 +27,8 @@ const Home = () => {
           </li>
         ))}
       </ul>  
-      <br/>          
+      <br/> 
+      <button onClick={() => setDarkmode(!darkmode)} > {darkmode ? 'lightmode':'darkmode'}</button>         
         </main>
     );
     
